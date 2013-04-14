@@ -27,9 +27,9 @@ n, m = [int(x) for x in sys.stdin.readline().split()]
 for counter in range(0, n):
 	newLine = sys.stdin.readline().split()
 
-	freq = int(newLine[0])
+	freq = long(newLine[0])
 	name = newLine[1]
-	q = float(freq)/(float(1)/float(counter+1))
+	q = float(freq*float((1+counter)))
 	inBuffer.append([freq, name, q, counter])
 
 inBuffer = quicksort(inBuffer)
